@@ -4,9 +4,9 @@ jquery-gatracker
 A JQuery plugin that enables Google Analytics event and page-view tracking on any page elements by simply declaring data attributes.
 
 [Overview](#overview)  
-[Installation](#install)  
-[Initialization](#init)  
-[Documentation](#docs)  
+[Installation](#installation)  
+[Initialization](#initialization)  
+[Documentation](#documentation)  
 
 
 ## <a id="overview"></a>Overview
@@ -56,14 +56,28 @@ function trackGAPageview() {
 <a href="http://www.example.com" gapageview>my link</a>
 ```
 
-## <a id="install"></a>Installation
+## <a></a>Installation
 
-Some installation info
+To install the gatracker plugin, simply place the `jquery.gatracker.js` file in 
+any location on your web server that can serve static resources (e.g. `/js/`)
 
-## <a id="init"></a>Initialization
+## <a></a>Initialization
 
-Some initialization info
+First, include a reference to the installed `jquery.gatracker.js` file in the `<head>` element of your HTML file:
 
-## <a id="docs"></a>Documentation
+```html
+<script type="text/javascript" src="/js/jquery.gatracker.js"></script>
+```
+
+Second, initialize the plugin just as you would any other JQuery plugin:
+
+```html
+<script type="text/javascript">
+  $(document).ready( function() {
+      $(this).gatracker();
+  });
+</script>
+```
+## <a></a>Documentation
 
 Some documentation on options
