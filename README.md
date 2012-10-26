@@ -103,7 +103,7 @@ Unless otherwise specified, the tracked event will be recorded at the time of th
 ## <a></a>Documentation
 
 ### Event Tracking Options
-The following attributes may be used on any page element for which you would like to enable event tracking.  They correspond directly to the options one would normally pass to the GA API function `_trackEvent`.
+The following attributes may be used on any page element for which you would like to enable event tracking.  They correspond directly to the options one would normally pass to the GA API function [`_trackEvent`](https://developers.google.com/analytics/devguides/collection/gajs/methods/gaJSApiEventTracking).
 
 `data-gaevent` (required) - designates an element as trackable.  A value may be specified for this attribute if you wish to overried the UI event on which the event should be recorded.  Any bindable JQuery event may be used (e.g. `mouseover`, etc.)   default = 'click'
  
@@ -114,3 +114,9 @@ The following attributes may be used on any page element for which you would lik
 `data-gaevent-label` (optional) - the label name to use for the event on this element.  default = ''
  
 `data-gaevent-value` (optional) - the value to associate with the tracked event
+
+### Virtual Pageview Options
+The following attributes may be used on any page element for which you would like to record a virtual pageview.
+
+`data-gapageview` (required) - designates an element as trackable.  A value may be specified for this attribute if you wish to overried the UI event on which the event should be recorded.  Any bindable JQuery event may be used (e.g. `mouseover`, etc.)   default = 'click'
+`data-gapageview-url` (required/optional for anchor elements) - The pageview url to record.  If the current page element is an anchor tag and this attribute is not specified, the value of `href` attribute of the anchor tag will be used.
