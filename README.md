@@ -120,7 +120,7 @@ Unless otherwise specified, the tracked event will be recorded at the time of th
 ### Event Tracking Options
 The following attributes may be used on any page element for which you would like to enable event tracking.  They correspond directly to the options one would normally pass to the GA API function [`_trackEvent`](https://developers.google.com/analytics/devguides/collection/gajs/methods/gaJSApiEventTracking).
 
-`data-gaevent` (required) - designates an element as trackable.  A value may be specified for this attribute if you wish to overried the UI event on which the event should be recorded.  Any bindable JQuery event may be used (e.g. `mouseover`, etc.)   default = 'click'
+`data-gaevent` (required) - designates an element as trackable.  A value may be specified for this attribute if you wish to override the UI event on which the event should be recorded.  Any bindable JQuery event may be used (e.g. `mouseover`, etc.)   default = 'click'
  
 `data-gaevent-category` (required) - the name of the event category to use for the tracked events
 
