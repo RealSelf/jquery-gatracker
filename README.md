@@ -96,7 +96,7 @@ Once the plugin has been initialized, you can enable crating virtual pageviews b
 Unless otherwise specified, the tracked event will be recorded at the time of the "click" event for the element. (see [Documentation](#documentation) below)
 
 
-```
+```html
 <a href="http://www.example.com" gapageview>my link</a>
 ```
 
