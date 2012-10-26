@@ -29,14 +29,14 @@ function trackGAEvent() {
 
 ```
 
-#### into this:
+#### Into this:
  ```html
 <a href="http://www.example.com" data-gaevent data-gaevent-category="link-clicks">my link</a>
 ```
 
 ### Simplifying calls to _trackPageview
 
-#### turn this:
+#### Turn this:
 
 ```html
 <script type="text/javascript">
@@ -52,7 +52,7 @@ function trackGAPageview() {
 
 ```
 
-#### into this:
+#### Into this:
 ```html
 <a href="http://www.example.com" gapageview>my link</a>
 ```
@@ -78,7 +78,22 @@ Second, initialize the plugin just as you would any other JQuery plugin:
       $(this).gatracker();
   });
 </script>
+```
 
+You can optionally override the default parameters for the plugin by passing one or more of them in to the initializer function.
+```html
+<script type="text/javascript">
+  opts = {
+    trackEvent: true, //enable event tracking
+    trackEventEvent: 'click',  //default UI event on which event tracking should occur
+    trackPageview: true,  //enable virtual pageview tracking
+    trackPageViewEvent: 'click'  //default UI event on which virtual pageviews should be recorded
+  };
+
+  $(document).ready( function() {
+      $(this).gatracker(opts);
+  });
+</script>
 ```
 ## <a></a>Usage
 
@@ -116,7 +131,8 @@ The following attributes may be used on any page element for which you would lik
 `data-gaevent-value` (optional) - the value to associate with the tracked event
 
 ### Virtual Pageview Options
-The following attributes may be used on any page element for which you would like to record a virtual pageview.
+The following attributes may be used on any page element for which you would like to record a virtual pageview.  See also [`_trackPageview`](https://developers.google.com/analytics/devguides/collection/gajs/methods/gaJSApiBasicConfiguration#_gat.GA_Tracker_._trackPageview) documentation.
 
 `data-gapageview` (required) - designates an element as trackable.  A value may be specified for this attribute if you wish to overried the UI event on which the event should be recorded.  Any bindable JQuery event may be used (e.g. `mouseover`, etc.)   default = 'click'
+
 `data-gapageview-url` (required/optional for anchor elements) - The pageview url to record.  If the current page element is an anchor tag and this attribute is not specified, the value of `href` attribute of the anchor tag will be used.
