@@ -54,7 +54,7 @@ function trackGAPageview() {
 
 #### Into this:
 ```html
-<a href="http://www.example.com" gapageview>my link</a>
+<a href="http://www.example.com" data-gapageview>my link</a>
 ```
 
 ## <a></a>Installation
@@ -99,20 +99,18 @@ You can optionally override the default parameters for the plugin by passing one
 
 ### Tracking Events
 Once the plugin has been initialized, you can enable tracking events on any given page element by simply adding two attributes:
-`data-gaevent` to designate the element as trackable and `data-gaevent-category="some event category"` to desinate the GA event category to use.
-Unless otherwise specified, the tracked event will be recorded at the time of the "click" event for the element. (see [Documentation](#documentation) below)
+`data-gaevent` to designate the element as trackable and `data-gaevent-category="some event category"` to desinate the GA event category to use.  Unless otherwise specified, the tracked event will be recorded at the time of the "click" event for the element. (see [Documentation](#documentation) below)
 
 ```html
 <a href="http://www.example.com" data-gaevent data-gaevent-category="link-clicks">my link</a>
 ```
 
 ### Tracking Virtual Pageviews
-Once the plugin has been initialized, you can enable crating virtual pageviews based on a click event in the UI by simply adding a `gapageview` attribute to any page element.  
-Unless otherwise specified, the tracked event will be recorded at the time of the "click" event for the element. (see [Documentation](#documentation) below)
+Once the plugin has been initialized, you can enable recording virtual pageviews based on a click event in the UI by simply adding a `gapageview` attribute to any page element.  Unless otherwise specified, the tracked event will be recorded at the time of the "click" event for the element. (see [Documentation](#documentation) below)
 
 
 ```html
-<a href="http://www.example.com" gapageview>my link</a>
+<a href="http://www.example.com" data-gapageview>my link</a>
 ```
 
 ## <a></a>Documentation
